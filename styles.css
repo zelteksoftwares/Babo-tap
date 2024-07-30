@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/assets/underwater-bubbles.gif') no-repeat center center fixed; /* Add your GIF background here */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#word-display {
+    font-size: 5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+#bubbles-container {
+    position: relative;
+    width: 90vw;
+    height: 50vh;
+    border: 5px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.bubble {
+    position: absolute;
+    width: 70px; /* Slightly bigger bubbles */
+    height: 70px; /* Slightly bigger bubbles */
+    border-radius: 50%;
+    background-color: #15a9dbe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bubble:active {
+    transform: scale(1.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}

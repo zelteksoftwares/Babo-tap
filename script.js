@@ -18,12 +18,14 @@ let bubblesContainer = document.getElementById("bubbles-container");
 let wordDisplay = document.getElementById("word-display");
 let correctSound = document.getElementById("correct-sound");
 let wrongSound = document.getElementById("wrong-sound");
+let popSound = document.getElementById("pop-sound");
+let resetSound = document.getElementById("reset-sound");
 
 function startGame() {
     currentWord = words[Math.floor(Math.random() * words.length)];
     missingLetterIndex = Math.floor(Math.random() * currentWord.length);
-    displayWord = currentWord.replace(currentWord[missingLetterIndex], "_");
-    wordDisplay.innerText = displayWord;
+    displayWord = currentWord.replace(currentWord[missingLetterIndex], `<span class="blink">_</span>`);
+    wordDisplay.innerHTML = displayWord; // Use innerHTML to include the span tag
     validLetters = getValidLetters(currentWord, missingLetterIndex);
     generateBubbles();
 }
@@ -75,16 +77,18 @@ function shuffleArray(array) {
 }
 
 function onBubblePop(bubble, letter) {
+    popSound.play();
     bubble.remove();
     if (validLetters.includes(letter)) {
         correctSound.play();
-        displayWord = displayWord.replace("_", letter);
-        wordDisplay.innerText = displayWord;
-        if (!displayWord.includes("_")) {
+        displayWord = displayWord.replace(`<span class="blink">_</span>`, letter);
+        wordDisplay.innerHTML = displayWord;
+        if (!displayWord.includes(`<span class="blink">_</span>`)) {
             setTimeout(startGame, 1000); // Start new word after 1 second delay
         }
     } else {
         wrongSound.play();
+        resetSound.play();
         generateBubbles(); // Reset bubbles for the same word
     }
 }

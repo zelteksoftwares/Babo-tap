@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('/assets/underwater-bubbles.gif') no-repeat center center fixed; /* Add your GIF background here */
+    background: url('/assets/images/underwater-bubbles.gif') no-repeat center center fixed; /* Add your GIF background here */
     background-size: cover;
     display: flex;
     justify-content: center;

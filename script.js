@@ -1,13 +1,13 @@
 const words = [
     "cat", "dog", "bat", "rat", "hat", "mat", "sat", "pat", "fat", "vat", 
-    "car", "bar", "far", "jar", "tar", "war", "mar", "par", "tar", "zar",
-    "cap", "gap", "lap", "map", "nap", "sap", "tap", "zap", "rap", "yap",
-    "cab", "dab", "fab", "jab", "lab", "nab", "tab", "jab", "fab", "sab",
-    "bed", "fed", "led", "red", "wed", "ted", "zed", "med", "ged", "ped",
-    "cot", "dot", "got", "hot", "lot", "not", "pot", "rot", "sot", "tot",
-    "cub", "dub", "hub", "nub", "pub", "rub", "sub", "tub", "yub", "zub",
-    "big", "dig", "fig", "gig", "jig", "pig", "rig", "wig", "zig", "lig",
-    "ban", "can", "dan", "fan", "man", "pan", "ran", "tan", "van", "wan"
+    "car", "bar", "far", "jar", "tar", "war", "mar", "par", "cap", 
+    "gap", "lap", "map", "nap", "sap", "tap", "zap", "rap", "yap",
+    "cab", "dab", "fab", "jab", "lab", "nab", "tab", 
+    "bed", "fed", "led", "red", "wed", "ted", "med", 
+    "cot", "dot", "got", "hot", "lot", "not", "pot", "rot", "tot",
+    "cub", "dub", "hub", "nub", "pub", "rub", "sub", "tub",
+    "big", "dig", "fig", "gig", "jig", "pig", "rig", "wig",
+    "ban", "can", "fan", "man", "pan", "ran", "tan", "van"
 ];
 
 let currentWord;
